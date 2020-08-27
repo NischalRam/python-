@@ -24,7 +24,7 @@ while True :
           print('hii,how can i help you')
           pyttsx3.speak('hii,how can i help you')
      elif ("how are you" in p):
-          print('i am doing fine,hope you are also doing well')
+          print('i am fine,hope you are also doing well')
           pyttsx3.speak('i am doing fine,hope you are also doing well')        
      elif ("dont" in p):
           print('ok,i will not open')
