@@ -1,0 +1,89 @@
+import pyttsx3
+import os
+import pywhatkit as whatsapp
+
+
+
+pyttsx3.speak("wlcome ")
+pyttsx3.speak("how can i help you  ")
+
+while True :
+     print('type what you want :', end='')
+     pyttsx3.speak("type what you want" )
+     p = input()
+     if ("chrome open website" in p):
+          print('Enter the URL of the website:',end='')
+          pyttsx3.speak('Enter the URL of the website')
+          c = input()
+          pyttsx3.speak('opening chrome for you')
+          os.system("chrome " + c )
+     elif (("run" in p) or ("open" in p)) and ("chrome" in p):
+           pyttsx3.speak('opening chrome for you')
+           os.system("chrome")
+     elif ("hii" in p):
+          print('hii,how can i help you')
+          pyttsx3.speak('hii,how can i help you')
+     elif ("how are you" in p):
+          print('i am doing fine,hope you are also doing well')
+          pyttsx3.speak('i am doing fine,hope you are also doing well')        
+     elif ("dont" in p):
+          print('ok,i will not open')
+          pyttsx3.speak('ok,i will not open')    
+     elif ("help" in p) and ("chrome" in p):
+          print()
+          print('use chrome to open broser')
+          print('use chrome open website  command to open any website ')
+          pyttsx3.speak('use chrome to open broser ')
+          pyttsx3.speak(' or use chrome open website  command to open any website  ')
+    
+     elif (("run" in p) or ("open" in p)) and ("notepad" in p):
+           pyttsx3.speak('opening notepad for you')
+           os.system("notepad")     
+     elif ("help" in p) and ("notepad" in p):
+          print()
+          print('use notepad command to open notepad')
+          print('user notepad save command to save the notepad ')
+          pyttsx3.speak('use notepad command to open notepad')
+          pyttsx3.speak('use notepad save command to save the notepad')
+     elif ("notepad save" in p):
+          print('what do you want your file name to be:',end='')
+          pyttsx3.speak('what do you want your file name to be')
+          c = input()
+          os.system("notepad " + c )  
+     elif (("run" in p) or ("open" in p)) and ("vlc" in p):
+           pyttsx3.speak('opening VLC for you')
+           os.system("vlc")
+     elif ("custom" in p):
+          print('please enter name of your command:',end='')
+          pyttsx3.speak('please enter name of your command:')
+          z = input()
+          print('please enter the command of it :',end='')
+          pyttsx3.speak('please enter the command of it')
+          y = input()
+          print('congratulations you command has been saved you are good go')
+          pyttsx3.speak('congratulations you command has been saved go a head and try your custom command')
+          print('type what you want :', end='')
+          pyttsx3.speak("type what you want:" )
+          p = input()
+          if(p == z):
+               engine = pyttsx3.init()
+               engine.say("opening " + z)
+               pyttsx3.speak(' for you')
+               print("opening %s for you" %(z))
+               os.system(y)
+     elif  ("exit" in p) or ("quit" in p)or ("bye" in p):
+          pyttsx3.speak("i am shutting down have a great day")
+          break
+     elif ("whatsapp chat" in p):
+           print('enter mobile number: ')
+           pyttsx3.speak("enter mobile number")
+           y = input()
+           print('enter massage what you want to send: ')
+           z = input()
+           whatsapp.sendwhatmsg( y, z ,0,0)
+     else:
+          print('sorry we are not having this command')
+          print('but you can use custom command to add your own commands')
+          pyttsx3.speak('sorry we are not having this command but you can use custom command to add your own commands')     
+
+
